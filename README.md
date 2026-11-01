@@ -4,6 +4,8 @@
 
 ## Repository Structure
 
+## Repository Structure
+
 ```text
 .
 ├── 01-bmp-grayscale/
@@ -18,7 +20,9 @@
 │   │   ├── input.wav
 │   │   └── reversed.wav
 │   └── main.c
-└── README.md~~~
+├── 03-stack-vm/
+│   └── main.cpp
+└── README.md
 
 ```
 
@@ -49,3 +53,14 @@ cp Samples/input.wav .
 ./run_wav
 
 ```
+
+### 3. Stack-Based Virtual Machine (03-stack-vm)
+A minimal, interactive stack-based virtual machine written in C++. It simulates a CPU's fetch-decode-execute cycle using a custom 4-instruction set (`PUSH`, `ADD`, `PRINT`, `HALT`). Manages its own instruction pointer (IP), stack pointer (SP), and raw array memory, allowing users to write and execute binary programs at runtime.
+
+**How to run it:**
+To run the VM, navigate to the project directory, compile the C++ source file, and execute the program. The VM will prompt you to enter instructions interactively.
+
+```bash
+cd 03-stack-vm
+g++ main.cpp -o run_vm
+./run_vm
